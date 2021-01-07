@@ -1,12 +1,23 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import { v4 as uuidv4 } from 'uuid'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons'
 
 import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
 
 const HomeIndex = () => {
-  const siteTitle = 'Gatsby Starter - Strata'
-  const siteDescription = 'Site description'
+  const siteTitle = 'Maurice Murangwa'
+  const siteDescription = 'This is a Portfolio of Maurice Murangwa'
+  const skills = [
+    'Front-end development: ReactJS, HTML5, CSS3, Javascript',
+    'Back-end development: Ruby on Rails, NodeJs',
+    'Databases:MySQL | PostgreSQL',
+    'Deployment Platforms: Netlify | Heroku',
+    'Styling: CSS3| SASS | MaterializeCSS | Bootstrap | TailwindCSS',
+    'Remote and Collaborative work experience',
+  ]
 
   return (
     <Layout>
@@ -19,22 +30,24 @@ const HomeIndex = () => {
         <section id="one">
           <header className="major">
             <h2>
-              Ipsum lorem dolor aliquam ante commodo
-              <br />
-              magna sed accumsan arcu neque.
+              I'm a Skilled Full-Stack Web Developer Who enjoys making Intuitive
+              applications.
+              <br />I am a Microverse graduate And Experienced In Remote Work.
             </h2>
           </header>
-          <p>
-            Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc
-            nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae
-            lobortis tortor primis integer massa adipiscing id nisi accumsan
-            pellentesque commodo blandit enim arcu non at amet id arcu magna.
-            Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate
-            lorem neque cubilia.
-          </p>
+          <ul>
+            {skills.map((skill) => (
+              <li key={uuidv4()}>
+                <FontAwesomeIcon icon={faAngleDoubleRight} /> {skill}
+              </li>
+            ))}
+          </ul>
           <ul className="actions">
             <li>
-              <a href="#" className="button">
+              <a
+                href="https://www.linkedin.com/in/mauricemurangwa/"
+                className="button"
+              >
                 Learn More
               </a>
             </li>
