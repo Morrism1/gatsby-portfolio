@@ -58,22 +58,13 @@ const HomeIndex = () => {
           <h2>Recent Work</h2>
 
           <Gallery />
-
-          <ul className="actions">
-            <li>
-              <a href="#" className="button">
-                Full Portfolio
-              </a>
-            </li>
-          </ul>
         </section>
 
         <section id="three">
           <h2>Get In Touch</h2>
           <p>
-            Accumsan pellentesque commodo blandit enim arcu non at amet id arcu
-            magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem
-            vulputate lorem neque lorem ipsum dolor.
+            For more information or business opportunities, you can send me an
+            email 😎.
           </p>
           <div className="row">
             <div className="8u 12u$(small)">
@@ -117,23 +108,17 @@ const HomeIndex = () => {
                   <h3 className="icon fa-home">
                     <span className="label">Address</span>
                   </h3>
-                  1234 Somewhere Rd.
+                  Kn 123 st.
                   <br />
-                  Nashville, TN 00000
+                  Nyarugenge, Kigali
                   <br />
-                  United States
-                </li>
-                <li>
-                  <h3 className="icon fa-mobile">
-                    <span className="label">Phone</span>
-                  </h3>
-                  000-000-0000
+                  Rwanda
                 </li>
                 <li>
                   <h3 className="icon fa-envelope-o">
                     <span className="label">Email</span>
                   </h3>
-                  <a href="#">hello@untitled.tld</a>
+                  <a href="#">maurice@octan.group</a>
                 </li>
               </ul>
             </div>
