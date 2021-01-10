@@ -16,42 +16,47 @@ export const DEFAULT_IMAGES = [
     id: '1',
     source: full01,
     thumbnail: thumb01,
-    caption: 'Photo 1',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    caption: 'Transax',
+    description:
+      'Transax is a transaction-tracking mobile web application for recording money spent shoping or other transaction needs you have.',
   },
   {
     id: '2',
     source: full02,
     thumbnail: thumb02,
-    caption: 'Photo 2',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    caption: 'Sneaker',
+    description: 'This is a Sneaker E-commerce website made in react.',
   },
   {
     id: '3',
     source: full03,
     thumbnail: thumb03,
-    caption: 'Photo 3',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    caption: 'Sneakers Api',
+    description:
+      "This is an Api for loading Sneakers' data, it is made with Rails and Mongodb.",
   },
   {
     id: '4',
     source: full04,
     thumbnail: thumb04,
-    caption: 'Photo 4',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    caption: 'Kgl Rentals',
+    description:
+      'KGL HRentals is a web app that bridges the gap between Rentors and Tenants. Made with Html5 and Sass/Scss.',
   },
   {
     id: '5',
     source: full05,
     thumbnail: thumb05,
-    caption: 'Photo 5',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    caption: 'Ror Social Media',
+    description:
+      'This project is based on social media fundamentals and already included the MVC for users, posts comments, posts likes and dislikes we added functionality for Friendships, Unit and integration tests. Made with Rails 6',
   },
   {
     id: '6',
     source: full06,
     thumbnail: thumb06,
-    caption: 'Photo 6',
-    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+    caption: 'Lyricify',
+    description:
+      'I decided to scrape Lyrics from azlyrics.com. I do love music much. I liked the idea that I can write the name and the title of the song for internationally recognized Artists and be able to find them. Made with Ruby.',
   },
 ]
