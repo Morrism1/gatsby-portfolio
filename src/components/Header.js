@@ -8,7 +8,7 @@ const Header = () => (
       <h1>
         <strong>I am Maurice Murangwa</strong>, a Full-stack Developer
         <br />
-        I turn business complex ideas into web applications.
+        I turn complex business ideas into web applications.
         <br />
       </h1>
     </div>
