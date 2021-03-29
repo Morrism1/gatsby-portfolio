@@ -1,11 +1,19 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { v4 as uuidv4 } from 'uuid'
+import { navigate } from 'gatsby-link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons'
 
 import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
+import Project from '../components/ProjectCard/Card'
+
+function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
 
 const HomeIndex = () => {
   const siteTitle = 'Maurice Murangwa'
@@ -18,6 +26,27 @@ const HomeIndex = () => {
     'Styling: CSS3| SASS | MaterializeCSS | Bootstrap | TailwindCSS',
     'Remote and Collaborative work experience',
   ]
+
+  const [state, setState] = React.useState({})
+
+  const handleChange = (e) => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const form = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute('action')))
+      .catch((error) => alert(error))
+  }
 
   return (
     <Layout>
@@ -37,7 +66,7 @@ const HomeIndex = () => {
           </header>
           <ul>
             {skills.map((skill) => (
-              <li key={uuidv4()}>
+              <li key={uuidv4()} className='py-1'>
                 <FontAwesomeIcon icon={faAngleDoubleRight} /> {skill}
               </li>
             ))}
@@ -47,6 +76,7 @@ const HomeIndex = () => {
               <a
                 href="https://www.linkedin.com/in/mauricemurangwa/"
                 className="button"
+                target="_blank"
               >
                 Learn More
               </a>
@@ -55,9 +85,9 @@ const HomeIndex = () => {
         </section>
 
         <section id="two">
-          <h2>Recent Work</h2>
+          <h2>Projects</h2>
 
-          <Gallery />
+          <Project />
         </section>
 
         <section id="three">
@@ -68,31 +98,48 @@ const HomeIndex = () => {
           </p>
           <div className="row">
             <div className="8u 12u$(small)">
-              <form method="post" action="#">
+              <form name="contact"
+                method="post"
+                action="/thanks/"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}>
+                <input type="hidden" name="form-name" value="contact" />
+                <p hidden>
+                  <label>
+                    Don’t fill this out: <input name="bot-field" onChange={handleChange} />
+                  </label>
+                </p>
                 <div className="row uniform 50%">
                   <div className="6u 12u$(xsmall)">
-                    <input
+                    <label>Your Name: <input
                       type="text"
                       name="name"
                       id="name"
                       placeholder="Name"
+                      onChange={handleChange}
                     />
+                    </label>
                   </div>
                   <div className="6u 12u$(xsmall)">
-                    <input
+                    <label>Your Email:   <input
                       type="email"
                       name="email"
                       id="email"
                       placeholder="Email"
+                      onChange={handleChange}
                     />
+                    </label>
                   </div>
                   <div className="12u">
-                    <textarea
+                    <label>Message: <textarea
                       name="message"
                       id="message"
                       placeholder="Message"
-                      rows="4"
+                      rows='4'
+                      onChange={handleChange}
                     ></textarea>
+                    </label>
                   </div>
                 </div>
                 <ul className="actions" style={{ marginTop: 30 }}>
