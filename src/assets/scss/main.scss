@@ -917,6 +917,7 @@
 		text-align: right;
 		top: 0;
 		width: $size-header-width;
+		z-index: 999;
 
 		> * {
 			@include vendor('flex-shrink', '0');
@@ -994,6 +995,7 @@
 		max-width: 50em + $size-header-pad;
 		padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
 		width: calc(100% - #{$size-header-width});
+		overflow: hidden;
 
 		> section {
 			border-top: solid 2px _palette(border);
