@@ -118,6 +118,7 @@ const HomeIndex = () => {
                       id="name"
                       placeholder="Name"
                       onChange={handleChange}
+                      required
                     />
                     </label>
                   </div>
@@ -128,6 +129,7 @@ const HomeIndex = () => {
                       id="email"
                       placeholder="Email"
                       onChange={handleChange}
+                      required
                     />
                     </label>
                   </div>
@@ -138,6 +140,7 @@ const HomeIndex = () => {
                       placeholder="Message"
                       rows='4'
                       onChange={handleChange}
+                      required
                     ></textarea>
                     </label>
                   </div>
