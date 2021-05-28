@@ -3,6 +3,8 @@ module.exports = {
     title: 'Maurice Murangwa Portfolio',
     author: 'Maurice Murangwa',
     description: 'This is a personal portfolio website of Maurice Murangwa',
+    keywords: `Maurice Murangwa, Software Developer Rwanda, Software Engineer Rwanda, Tech in Rwanda, React Developer Kigali`,
+    image: `src/assets/images/maurice.png`
   },
   plugins: [
     'gatsby-plugin-react-helmet',
