@@ -8,6 +8,7 @@ import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons'
 import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
 import Project from '../components/ProjectCard/Card'
+import SEO from '../components/Seo'
 
 function encode(data) {
   return Object.keys(data)
@@ -50,10 +51,7 @@ const HomeIndex = () => {
 
   return (
     <Layout>
-      <Helmet>
-        <title>{siteTitle}</title>
-        <meta name="description" content={siteDescription} />
-      </Helmet>
+      <SEO title={siteTitle} />
 
       <div id="main">
         <section id="one">
