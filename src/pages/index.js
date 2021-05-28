@@ -103,6 +103,7 @@ const HomeIndex = () => {
                 action="/thanks/"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
+                data-netlify-recaptcha="true"
                 onSubmit={handleSubmit}>
                 <input type="hidden" name="form-name" value="contact" />
                 <p hidden>
@@ -145,6 +146,7 @@ const HomeIndex = () => {
                     </label>
                   </div>
                 </div>
+                <div data-netlify-recaptcha="true"></div>
                 <ul className="actions" style={{ marginTop: 30 }}>
                   <li>
                     <input type="submit" value="Send Message" />
